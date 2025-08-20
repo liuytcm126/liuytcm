@@ -451,15 +451,15 @@ SOFTWARE.
         if portable_dir.exists():
             shutil.rmtree(portable_dir)
             
-            # 复制可执行文件
-            exe_file = self.dist_dir / self.app_name
-            if exe_file.exists():
-                portable_dir.mkdir(exist_ok=True)
-                if exe_file.is_file():
-                    shutil.copy2(exe_file, portable_dir)
-                else:
-                    shutil.copytree(exe_file, portable_dir)
-            
+        # 检查可执行文件是否存在
+        exe_file = self.dist_dir / self.app_name
+        if exe_file.exists():
+            portable_dir.mkdir(exist_ok=True)
+            if exe_file.is_file():
+                shutil.copy2(exe_file, portable_dir)
+            else:
+                shutil.copytree(exe_file, portable_dir / self.app_name)
+        
             # 添加便携版说明
             portable_readme = portable_dir / "便携版说明.txt"
             with open(portable_readme, 'w', encoding='utf-8') as f:
@@ -480,7 +480,7 @@ SOFTWARE.
 
 技术支持：support@neuroscales.com
 ''')
-            
+        
             # 创建压缩包
             archive_name = f"{self.app_name}_v{self.version}_Portable"
             shutil.make_archive(archive_name, 'zip', portable_dir)
