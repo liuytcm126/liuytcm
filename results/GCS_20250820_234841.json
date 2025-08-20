@@ -1,0 +1,16 @@
+{
+  "scale_name": "GCS",
+  "scale_full_name": "格拉斯哥昏迷量表",
+  "assessment_date": "2025-08-20 23:48:41",
+  "total_score": 11,
+  "max_score": 15,
+  "eye_score": 2,
+  "verbal_score": 5,
+  "motor_score": 4,
+  "severity": "中度意识障碍",
+  "responses": {
+    "eye": 2,
+    "verbal": 5,
+    "motor": 4
+  }
+}

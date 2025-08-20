@@ -1,0 +1,13 @@
+{
+  "scale_name": "mRS",
+  "scale_full_name": "改良Rankin量表",
+  "assessment_date": "2025-08-20 23:45:38",
+  "score": 5,
+  "max_score": 6,
+  "severity": "重度残疾",
+  "functional_status": "完全依赖他人",
+  "prognosis": "预后差",
+  "responses": {
+    "mrs_score": 5
+  }
+}
