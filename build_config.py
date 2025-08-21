@@ -450,7 +450,7 @@ SOFTWARE.
         portable_dir = self.project_root / f"{self.app_name}_v{self.version}_Portable"
         if portable_dir.exists():
             shutil.rmtree(portable_dir)
-            
+        
         # 检查可执行文件是否存在
         exe_file = self.dist_dir / self.app_name
         if exe_file.exists():
